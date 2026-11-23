@@ -1,0 +1,84 @@
+Construct - credits
+===================
+
+Construct is made by birdman311.
+
+  Construct's own work: the Switch 2 support work, the fixes and tuning for Hyrule Warriors:
+  Age of Imprisonment and other Switch 2 games, the Construct name, icon and theme, the glyph
+  script and its scrolling ribbons, the game list fixes, and the Linux build.
+
+  birdman311's own new files are under the MIT license, so anyone may reuse them in any project
+  as long as this credit is kept:
+    - src/yuzu/glyph_ribbon.h, src/yuzu/glyph_ribbon.cpp   (scrolling glyph ribbons)
+    - tools/theme/*                                          (theme and art generators)
+    - dist/qt_themes/construct/                              (theme, glyph alphabet and frame art)
+  Copyright (c) 2026 birdman311. The MIT license text is in LICENSES/MIT.txt.
+
+  Everything else in Construct is built on the emulators below and stays under their license,
+  the GNU General Public License (GPL-3.0-or-later for Construct as a whole). If you share a
+  changed version of Construct, share its source code too.
+
+
+Built on
+--------
+  Eden            by the Eden Emulator Project and contributors        GPL-3.0-or-later
+  yuzu            by the yuzu Emulator Project and contributors        GPL-2.0-or-later
+  Citra           by the Citra Emulator Project (code yuzu grew from)  GPL-2.0-or-later
+  dynarmic        ARM CPU recompiler, by MerryMage and contributors
+  Thank you to everyone who worked on these projects. Construct would not exist without them.
+
+
+Libraries and tools included in Construct
+-----------------------------------------
+  Qt 6                         The Qt Company                       LGPL-3.0
+  QDarkStyleSheet              Colin Duquesnoy (base of the theme)  MIT
+  SDL 3                        Sam Lantinga and contributors        Zlib
+  FFmpeg                       FFmpeg developers                    LGPL-2.1-or-later
+  Boost                        Boost contributors                   BSL-1.0
+  {fmt}                        Victor Zverovich and contributors    MIT
+  OpenSSL                      The OpenSSL Project                  Apache-2.0
+  Opus                         Xiph.Org Foundation and contributors BSD-3-Clause
+  cubeb                        Mozilla and contributors             ISC
+  ENet                         Lee Salzman                          MIT
+  libusb                       libusb contributors                  LGPL-2.1-or-later
+  LZ4                          Yann Collet                          BSD-2-Clause
+  Zstandard                    Meta Platforms, Inc.                 BSD-3-Clause
+  zlib                         Jean-loup Gailly and Mark Adler      Zlib
+  nlohmann/json                Niels Lohmann                        MIT
+  cpp-httplib                  Yuji Hirose                          MIT
+  cpp-jwt                      Arun Muralidharan                    MIT
+  QuaZip                       QuaZip contributors                  LGPL-2.1 (with static linking exception)
+  simpleini                    Brodie Thiesfield                    MIT
+  frozen                       Serge Guelton and contributors       Apache-2.0
+  xbyak                        MITSUNARI Shigeo                     BSD-3-Clause
+  sirit                        ReinUsesLisp and contributors        BSD-3-Clause
+  SPIR-V Headers               The Khronos Group                    MIT
+  Vulkan Headers               The Khronos Group                    Apache-2.0
+  Vulkan Utility Libraries     The Khronos Group                    Apache-2.0
+  Vulkan Memory Allocator      Advanced Micro Devices, Inc.         MIT
+  AMD FidelityFX FSR           Advanced Micro Devices, Inc.         MIT
+  ReShade FX compiler          Patrick Mours                        BSD-3-Clause
+  stb                          Sean Barrett                         MIT / public domain
+  glad                         David Herberth                       MIT
+  RenderDoc API header         Baldur Karlsson                      MIT
+  LLVM demangler               LLVM Project                         Apache-2.0 WITH LLVM-exception
+  tz database                  IANA and contributors                public domain
+  GameMode (Linux only)        Feral Interactive                    BSD-3-Clause
+  DirectX Shader Compiler      Microsoft (dxcompiler.dll, dxil.dll) Microsoft redistribution terms
+  Visual C++ runtime           Microsoft (msvcp140*.dll etc.)       Microsoft redistribution terms
+
+  License names are given for convenience. The full license texts are in the LICENSES folder
+  and in each project's own source code; those texts are what count.
+
+
+Notes
+-----
+  The glyph alphabet in Construct's theme is an original 26-letter cipher drawn for Construct
+  in the style of ancient carved scripts. No art, textures or other files from any game are
+  included.
+
+  Construct is not affiliated with or endorsed by Nintendo. Nintendo Switch, Hyrule Warriors and
+  The Legend of Zelda are trademarks of Nintendo; Hyrule Warriors is developed with Koei Tecmo.
+  Pokemon is a trademark of Nintendo, Creatures Inc. and GAME FREAK inc.
+
+  Construct does not include keys, firmware or games. Use your own, dumped from your own console.
