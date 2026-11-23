@@ -11,6 +11,7 @@
 #include <string>
 #include <thread>
 
+#include "video_core/shader_cache_resolution_guard.h"
 #include "common/alignment.h"
 #include "common/assert.h"
 #include "common/fs/fs.h"
@@ -289,6 +290,7 @@ void ShaderCache::LoadDiskResources(u64 title_id, std::stop_token stop_loading,
         LOG_ERROR(Common_Filesystem, "Failed to create shader cache directories");
         return;
     }
+    VideoCommon::ClearShaderCacheIfResolutionChanged(base_dir);
     shader_cache_filename = base_dir / "opengl.bin";
 
     if (!workers && !strict_context_required) {

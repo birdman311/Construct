@@ -15,6 +15,7 @@
 #include <vector>
 #include <bit>
 #include <numeric>
+#include "video_core/shader_cache_resolution_guard.h"
 #include "common/cityhash.h"
 #include "common/fs/fs.h"
 #include "common/fs/path_util.h"
@@ -625,6 +626,7 @@ void PipelineCache::LoadDiskResources(u64 title_id, std::stop_token stop_loading
         LOG_ERROR(Common_Filesystem, "Failed to create pipeline cache directories");
         return;
     }
+    VideoCommon::ClearShaderCacheIfResolutionChanged(base_dir);
     // Switch 2 titles: one file per lowering version. Construct and Eden 2 share this folder and
     // differ in lowering version; with one shared vulkan.bin each deleted the other's cache on
     // every switch (a cold cache = long shader-build stalls).

@@ -91,6 +91,10 @@ std::unique_ptr<TranslationMap> InitializeTranslations(QObject* parent) {
     INSERT(Settings, cpu_accuracy, tr("Accuracy:"),
            tr("Change the accuracy of the emulated CPU (for debugging only)."));
     INSERT(Settings, cpu_backend, tr("Backend:"), QString());
+    INSERT(Settings, cpu_cores, tr("CPU Cores"),
+           tr("How many CPU cores are emulated (4-6). Switch 1 games use 4. Switch 2 games also run "
+              "threads on cores 5 and 6; with 4 those share core 1, which can limit FPS in busy "
+              "scenes. More cores need a stronger PC. Takes effect when a game starts."));
 
     INSERT(Settings, cpu_clock, tr("CPU Clocks"),
            tr("Raises the clock the emulated CPU reports, which removes some FPS limiters.\n"
@@ -464,11 +468,11 @@ std::unique_ptr<ComboboxTranslationMap> ComboboxEnumeration(QObject* parent) {
              PAIR(ResolutionSetup, Res1_4X, tr("0.25X (180p/270p) [EXPERIMENTAL]")),
              PAIR(ResolutionSetup, Res1_2X, tr("0.5X (360p/540p) [EXPERIMENTAL]")),
              PAIR(ResolutionSetup, Res3_4X, tr("0.75X (540p/810p) [EXPERIMENTAL]")),
-             PAIR(ResolutionSetup, Res1X, tr("1X (720p/1080p)")),
+             PAIR(ResolutionSetup, Res1X, tr("1X (720p/1080p) - Standard")),
              PAIR(ResolutionSetup, Res5_4X, tr("1.25X (900p/1350p) [EXPERIMENTAL]")),
              PAIR(ResolutionSetup, Res3_2X, tr("1.5X (1080p/1620p) [EXPERIMENTAL]")),
-             PAIR(ResolutionSetup, Res2X, tr("2X (1440p/2160p)")),
-             PAIR(ResolutionSetup, Res3X, tr("3X (2160p/3240p)")),
+             PAIR(ResolutionSetup, Res2X, tr("2X (1440p/2160p) - Double, sharp")),
+             PAIR(ResolutionSetup, Res3X, tr("3X (2160p/3240p) - Triple, for powerful PCs")),
              PAIR(ResolutionSetup, Res4X, tr("4X (2880p/4320p)")),
              PAIR(ResolutionSetup, Res5X, tr("5X (3600p/5400p)")),
              PAIR(ResolutionSetup, Res6X, tr("6X (4320p/6480p)")),

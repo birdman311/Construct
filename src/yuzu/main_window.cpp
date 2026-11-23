@@ -363,7 +363,24 @@ MainWindow::MainWindow(bool has_broken_vulkan)
     QtCommon::Init(this);
 
     Common::FS::CreateEdenPaths();
+    // Construct: a brand-new install (no settings file yet) picks its resolution scale from the
+    // monitor. Existing settings are never changed; it can be changed in Configure > Graphics.
+    const bool fresh_install = !Common::FS::Exists(
+        Common::FS::GetEdenPath(Common::FS::EdenPath::ConfigDir) / "qt-config.ini");
     this->config = std::make_unique<QtConfig>();
+    if (fresh_install) {
+        if (const QScreen* screen = QGuiApplication::primaryScreen()) {
+            // physical pixels; docked Switch games render at 1080p, so 2x already reaches 4K
+            const int height = qRound(screen->geometry().height() * screen->devicePixelRatio());
+            const auto scale = height > 2200   ? Settings::ResolutionSetup::Res3X
+                               : height > 1200 ? Settings::ResolutionSetup::Res2X
+                                               : Settings::ResolutionSetup::Res1X;
+            Settings::values.resolution_setup.SetValue(scale);
+            config->SaveAllValues();
+            LOG_INFO(Frontend, "First start: monitor height {} px -> resolution scale {}", height,
+                     static_cast<int>(scale));
+        }
+    }
 
     Common::Log::Filter filter;
     filter.ParseFilterString(Settings::values.log_filter.GetValue());
