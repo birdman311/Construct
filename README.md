@@ -12,7 +12,7 @@ Sharper picture: the emulator lets you increase the quality of Hyrule warriors a
 
 Automatic resolution: Construct automatically changes the image quility based on your monitor: 1080p gets 1X, 1440p and 4K get 2X, bigger screens get 3X. Change it any time in Configure > Graphics > Resolution (1X Standard, 2X Double, 3X Triple).
 
-set the amount of cores at your choosing. you can change the amount of cores you want from 4 cores all the way to 6 CPU cores. this helps increase performance for example: when i tested pokopia it went from 48.7 FPS to 58.2 FPS on its title screen.
+You can set the number of emulated CPU cores anywhere from 4 to 6. This helps increase performance. For example, when I tested Pokopia it went from 48.7 FPS to 58.2 FPS on its title screen.
 
 another feature is it Works with Switch 1 games too, just like the Eden emulator it's built on.
 
@@ -24,10 +24,13 @@ you also can drop your Custom icons for games in their folder. Icon.png into the
 
 Optimization features
 
-Construct has been optimized as much as it can and has many features others don't have. unlike most emulators construct loads Much faster and even performs better during cutsceness. 
-another feature Construct uses is its feature to on tartup  shaders are prepared at boot, which cut that wait from about 55 seconds on most emulators to about 10.
-Construct aslso uses less memory then most emulators while many leak and have oversized buffers i have fixed such issues in Construct so it runs better, even on pc's with less ram like mine which only uses 8gb of ddr4. and the gratest thing of all is how i have made it almost perfectly stable while all the other emulators struggle to get this game to load due to the insane amounts of calls for switch 2 features i fixed that problem easily while others stutter flicker and glitch stretch or just have a black screen Construct works perfectly fine with no issues.
+Construct has been optimized a lot, with fixes made specifically for Hyrule Warriors: Age of Imprisonment and other Switch 2 games.
 
+ Faster loading after cutscenes: shaders are prepared at startup, which cut the wait after cutscenes from about 55 seconds to about 10.
+
+ Less memory: I fixed memory leaks and oversized buffers, so Construct runs better even on PCs with less RAM, like mine with only 8 GB of DDR4.
+
+Stability: Switch 2 games make a huge number of calls to Switch 2 features. I fixed the ones that caused screen flashing, broken particle effects, bosses that couldn't be beaten, black screens and crashes, so Hyrule Warriors: Age of Imprisonment is fully playable. Big fights can still dip in FPS on slower PCs, and I'm still working on that.
 
 Linux
  An early Linux version, is on the way once i finish testing it.
